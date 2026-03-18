@@ -5,7 +5,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh?style=social)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Claude Code](https://img.shields.io/badge/Claude_Code-2.1.52-green.svg)
+![Claude Code](https://img.shields.io/badge/Claude_Code-2.1.78-green.svg)
 ![OpenClaw](https://img.shields.io/badge/OpenClaw-v2026.2.23-blue.svg)
 
 **AI 双顶流 · 中文教程扛把子**
@@ -82,7 +82,7 @@
 - **👶 小白友好**：72个术语解释、40个生活类比、170+FAQ
 - **💻 实战导向**：70+个可运行代码示例，边学边练
 - **📊 质量保证**：所有教程经 WebSearch 验证，信息准确可靠
-- **🔄 持续更新**：适配最新版本（Claude Code 2.1.52 / OpenClaw v2026.2.23）
+- **🔄 持续更新**：适配最新版本（Claude Code 2.1.78 / OpenClaw v2026.2.23）
 
 ---
 
@@ -96,8 +96,8 @@
 | 02 | [基础使用完整指南](docs/claude-code/02-基础使用完整指南.md) | 4-6h | ⭐ | ⭐⭐⭐ | 三种使用模式、30+命令详解 |
 | 03 | [Commands系统完整指南](docs/claude-code/03-Commands系统完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐ | 自定义Slash命令、工作流组合 |
 | 04 | [MCP集成完整指南](docs/claude-code/04-MCP集成完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐⭐ | 10+核心服务器、自定义开发 |
-| 05 | [Hooks系统完整指南](docs/claude-code/05-Hooks系统完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐⭐ | 8种Hook类型（含Worktree管理）、自动化工作流 |
-| 06 | [Subagent子代理完整指南](docs/claude-code/06-Subagent子代理完整指南.md) | 1-2h | ⭐⭐ | ⭐⭐ | 100+专家代理一键扩展 |
+| 05 | [Hooks系统完整指南](docs/claude-code/05-Hooks系统完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐⭐ | 20种Hook类型（含HTTP Hooks）、自动化工作流 |
+| 06 | [Subagent子代理完整指南](docs/claude-code/06-Subagent子代理完整指南.md) | 1-2h | ⭐⭐ | ⭐⭐ | 100+专家代理、Agent Teams多代理团队 |
 | 07 | [Skills定制完整指南](docs/claude-code/07-Skills定制完整指南.md) | 6-8h | ⭐⭐ | ⭐⭐ | 创建可复用功能包 |
 | 08 | [Plugins生态完整指南](docs/claude-code/08-Plugins生态完整指南.md) | 4-6h | ⭐⭐ | ⭐ | Marketplace浏览与安装 |
 | 09 | [Agent-SDK完整指南](docs/claude-code/09-Agent-SDK完整指南.md) | 6-8h | ⭐⭐⭐ | ⭐⭐ | 编程开发AI Agent |
@@ -194,7 +194,7 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 | **FAQ数量** | 170+ 个 |
 | **覆盖AI模型** | 29 个提供商（OpenClaw） |
 | **覆盖消息平台** | 15+ 个（OpenClaw） |
-| **Claude Code版本** | 2.1.52（2026-02-25 验证） |
+| **Claude Code版本** | 2.1.78（2026-03-18 验证） |
 | **OpenClaw版本** | v2026.2.23（2026-02-24 验证） |
 
 ---
@@ -254,6 +254,20 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 ---
 
 ## 📋 更新日志
+
+### v3.1 (2026-03-18) — Claude Code v2.1.69-v2.1.78 新功能补充
+
+**11个教程文件全面更新**，净增 644 行内容
+
+- 02-基础使用：新增 `/voice` 语音模式、`/effort` 推理深度、Auto Memories 自动记忆、模型表增加 1M 上下文和 128K 输出
+- 03-Commands：新增 `/loop`、`/effort`、`/sandbox`、`/color`、`/copy`、`/branch` 6 个新命令详解
+- 04-MCP集成：新增 MCP Elicitation 交互式信息请求
+- 05-Hooks系统：新增 StopFailure、PostCompact、InstructionsLoaded、Elicitation/ElicitationResult 5 种新 Hook + HTTP Hooks 远程 Webhook
+- 06-Subagent：新增 Agent Teams 多代理团队协作概述
+- 07-Skills：新增 `${CLAUDE_SKILL_DIR}` 变量说明
+- 10-综合实战：新增 Sandbox 沙箱配置详解、128K 输出 token 说明
+- 11-企业实战：新增 `modelOverrides` 企业端点映射、Worktree/sparsePaths 大型 monorepo 优化
+- 全部文件统一更新模型名称至最新格式
 
 ### v3.0 (2026-02-25) — 双顶流合璧
 
@@ -324,7 +338,7 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 
 ## ⚠️ 免责声明
 
-- Claude Code 教程基于 2.1.52 版本编写，OpenClaw 教程基于 v2026.2.23 版本编写（持续更新中）
+- Claude Code 教程基于 2.1.78 版本编写，OpenClaw 教程基于 v2026.2.23 版本编写（持续更新中）
 - 部分功能可能随版本更新而变化，请以官方文档为准
 - 使用本教程产生的任何问题，作者不承担责任
 
